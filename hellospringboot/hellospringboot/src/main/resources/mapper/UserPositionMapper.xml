@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.UserPositionMapper">
+  <resultMap id="BaseResultMap" type="com.demo.pojo.UserPosition">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+    <result column="longitude" jdbcType="DECIMAL" property="longitude" />
+    <result column="latitude" jdbcType="DECIMAL" property="latitude" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, city, position, longitude, latitude
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from userposition
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getvicinity" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from userposition
+    where longitude &gt;= #{minlng} and longitude &lt;= #{maxlng} and latitude &gt;= #{minlat} and latitude &lt;= #{maxlat}
+  </select>
+  <select id="getvicinitysort" resultMap="BaseResultMap">
+    SELECT id, city, position, longitude,latitude,
+        (POWER(MOD(ABS(longitude - #{longitude}),360),2) + POWER(ABS(latitude - #{latitude}),2)) AS distance
+        FROM `userposition`
+        ORDER BY distance LIMIT 20
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from userposition
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.demo.pojo.UserPosition">
+    insert into userposition (id, city, position, 
+      longitude, latitude)
+    values (#{id,jdbcType=INTEGER}, #{city,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, 
+      #{longitude,jdbcType=DECIMAL}, #{latitude,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.pojo.UserPosition">
+    insert into userposition
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="position != null">
+        position,
+      </if>
+      <if test="longitude != null">
+        longitude,
+      </if>
+      <if test="latitude != null">
+        latitude,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null">
+        #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null">
+        #{latitude,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.pojo.UserPosition">
+    update userposition
+    <set>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="longitude != null">
+        longitude = #{longitude,jdbcType=DECIMAL},
+      </if>
+      <if test="latitude != null">
+        latitude = #{latitude,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.pojo.UserPosition">
+    update userposition
+    set city = #{city,jdbcType=VARCHAR},
+      position = #{position,jdbcType=VARCHAR},
+      longitude = #{longitude,jdbcType=DECIMAL},
+      latitude = #{latitude,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

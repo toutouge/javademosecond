@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>抱歉,这是一个错误页</title>
+</head>
+<body>
+<div>很抱歉，这是我们的一个错误页</div>
+<div>影响的因素有很多，我们会尽快解决的。  ﹃_﹃〣</div>
+<div th:text="${url}"></div>
+<div th:text="${exception.message}"></div>
+</body>
+</html>

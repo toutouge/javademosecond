@@ -1,2 +1,3 @@
-# javademosecond
-java各种demo集成
+# java demo
+Springboot sample
+Please refer to blog http://www.cnblogs.com/toutou for details.

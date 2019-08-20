@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.dao.UserDetailsMapper">
+  <resultMap id="BaseResultMap" type="com.demo.pojo.UserDetails">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="marry" jdbcType="BIT" property="marry" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, uid, address, city, marry
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from userdetails
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getUserDetailsByUid" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from userdetails
+    where uid = #{uid,jdbcType=INTEGER}
+  </select>
+  <select id="getUserDetails" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from userdetails
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from userdetails
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.demo.pojo.UserDetails">
+    insert into userdetails (id, uid, address, 
+      city, marry)
+    values (#{id,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{marry,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo.pojo.UserDetails">
+    insert into userdetails
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="marry != null">
+        marry,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="marry != null">
+        #{marry,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.pojo.UserDetails">
+    update userdetails
+    <set>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="marry != null">
+        marry = #{marry,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo.pojo.UserDetails">
+    update userdetails
+    set uid = #{uid,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      marry = #{marry,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

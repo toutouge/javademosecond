@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket demo</title>
+</head>
+<body>
+<noscript>Your browser does not support JavaScript!</noscript>
+<div>
+    <div>
+        <button id="connect" onclick="connect()">连接</button>
+        <button id="disconnect" onclick="disconnect()">断开连接</button><br/>
+        <p id="connectStatus">未连接</p>
+        <br/><br/>
+    </div>
+    <div id="conversation">
+        <label>输入发送信息</label>
+        <input type="text" id="requestMessage">
+        <button id="sendMessage" onclick="sendMessage()">发送</button>
+        <p id="responseMessage"></p>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script src="https://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
+<script type="text/javascript">
+    var stompClient = null;
+    $(function () {
+        setConnected(false);
+    });
+    function setConnected(connected) {
+        if(connected){
+            $("#connect").attr("disabled",true);
+            $("#disconnect").attr("disabled",false);
+            $("#conversation").show();
+            $("#connectStatus").html("已连接");
+        }else{
+            $("#connect").attr("disabled",false);
+            $("#disconnect").attr("disabled",true);
+            $("#conversation").hide();
+            $("#connectStatus").html("未连接");
+        }
+        $("#responseMessage").html();
+    }
+    function connect() {
+        var socket = new SockJS("/customendpoint");//连接SockJs的endpoint-/customendpoint
+        stompClient = Stomp.over(socket)//使用STOMP子协议的WebSocket客户端
+        stompClient.connect({},function (frame) {
+            setConnected(true);
+            console.log("Connected:"+frame);
+            stompClient.subscribe("/topic/getResponse",function (response) {
+                showResponseMessage(JSON.parse(response.body).responseMessage);
+            });
+        });
+    }
+    function disconnect() {
+        if(stompClient!=null){
+            stompClient.disconnect();
+            setConnected(false);
+            console.log("Disconnected")
+        }
+    }
+    function showResponseMessage(message) {
+        $("#responseMessage").html(message);
+    }
+    function sendMessage() {
+        var requseMessage = $("#requestMessage").val();
+        console.log("requseMessage:"+requseMessage);
+        stompClient.send("/socket",{},JSON.stringify({"requestMessage":requseMessage}));
+    }
+</script>
+</body>
+</html>

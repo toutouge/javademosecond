@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.dao.UserinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.Userinfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="BIT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pw" property="pw" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sex, name, pw, createtime
+  </sql>
+  <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.springmvc.entity.Userinfo">
+    select
+    <include refid="Base_Column_List" />
+    from userinfo
+    <where>
+      <if test="id != null" >
+        id = #{id,jdbcType=INTEGER}
+      </if>
+      <if test="name != null" >
+        AND name = #{name,jdbcType=VARCHAR}
+      </if>
+      <if test="createtime != null" >
+        AND createtime = #{createtime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="pw != null" >
+        AND pw = #{pw,jdbcType=VARCHAR}
+      </if>
+    </where>
+  </select>
+  <insert id="insert" parameterType="com.springmvc.entity.Userinfo" >
+    insert into userinfo (id, sex, name, pw,
+      createtime)
+    values (#{id,jdbcType=INTEGER}, #{sex,jdbcType=BIT}, #{name,jdbcType=VARCHAR}, #{pw,jdbcType=VARCHAR},
+      #{createtime,jdbcType=TIMESTAMP})
+  </insert>
+</mapper>
