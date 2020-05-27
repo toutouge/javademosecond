@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ThinkingInJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ThinkingInJava_jar</output-path>
+    <root id="archive" name="ThinkingInJava.jar">
+      <element id="module-output" name="ThinkingInJava" />
+    </root>
+  </artifact>
+</component>

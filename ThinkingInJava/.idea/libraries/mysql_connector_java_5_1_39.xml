@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-5.1.39">
+    <CLASSES>
+      <root url="jar://E:/soft/mybatis-generator/mybatis-generator/mysql-connector-java-5.1.39.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
