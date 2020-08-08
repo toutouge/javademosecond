@@ -6,11 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AllSample" />
+        <module name="hello" />
+        <module name="leet-code" />
+        <module name="thread-sample" />
+        <module name="Threads" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AllSample" target="1.8" />
+      <module name="hello" target="1.8" />
+      <module name="leet-code" target="1.7" />
+      <module name="thread-sample" target="1.7" />
+      <module name="Threads" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

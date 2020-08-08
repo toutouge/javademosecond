@@ -6,7 +6,12 @@
 
   <groupId>com.toutou.sample</groupId>
   <artifactId>AllSample</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>leet-code</module>
+    <module>thread-sample</module>
+  </modules>
 
   <name>AllSample</name>
   <!-- FIXME change it to the project's website -->
