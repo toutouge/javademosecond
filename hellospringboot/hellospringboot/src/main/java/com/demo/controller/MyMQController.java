@@ -17,7 +17,7 @@ import java.util.UUID;
 public class MyMQController {
     @Autowired
     MyProducer myProducers;
-
+ 
     @GetMapping("/mq/producer")
     public String myProducer(String content){
         MyModel model = new MyModel();
