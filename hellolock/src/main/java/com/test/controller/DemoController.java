@@ -15,11 +15,22 @@ public class DemoController {
     @Autowired
     DemoService demoService;
 
+    /**
+     * 写入redis测试
+     * @param id
+     * @param text
+     * @return
+     */
     @RequestMapping("/set")
     public String set(int id, String text){
         return demoService.set(id,text);
     }
 
+    /**
+     * 读取redis测试
+     * @param id
+     * @return
+     */
     @RequestMapping("/get")
     public String get(int id){
         return demoService.get(id);
