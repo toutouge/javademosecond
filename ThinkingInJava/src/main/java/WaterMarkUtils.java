@@ -13,11 +13,11 @@ import javax.imageio.ImageIO;
 public class WaterMarkUtils {
     //定义水印文字样式
     private static final String MARK_TEXT = "请叫我头头哥";
-    private static final String FONT_NAME = "微软雅黑";
+    private static final String FONT_NAME = "宋体";
     private static final int FONT_STYLE = Font.BOLD;
     private static final int FONT_SIZE = 20;
     private static final Color FONT_COLOR = Color.gray;
-    private static final String PATH = "D:\\Project\\H5\\Blog\\images";
+    private static final String PATH = "F:\\Code\\Java\\test";
 
     private static final float ALPHA = 0.3F;
 

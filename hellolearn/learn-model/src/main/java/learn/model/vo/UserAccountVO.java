@@ -1,5 +1,9 @@
 package learn.model.vo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import learn.annotation.Sensitivity;
+import learn.model.enums.SensitivityEnum;
+
 /**
  * @author toutou
  * @date by 2019/07
@@ -7,10 +11,15 @@ package learn.model.vo;
 public class UserAccountVO {
     private Integer id;
 
+    @Sensitivity(strategy = SensitivityEnum.USERNAME)
     private String username;
 
     private Integer age;
 
+    @Sensitivity(strategy = SensitivityEnum.PHONE)
+    private String tel;
+
+    @JsonIgnore
     private Long phone;
 
     private String email;
@@ -63,5 +72,13 @@ public class UserAccountVO {
 
     public void setAccount(String account) {
         this.account = account == null ? null : account.trim();
+    }
+
+    public String getTel() {
+        return String.valueOf(getPhone());
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 }

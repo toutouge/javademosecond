@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AllSample/AllSample.iml" filepath="$PROJECT_DIR$/AllSample/AllSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThinkingInJava/ThinkingInJava.iml" filepath="$PROJECT_DIR$/ThinkingInJava/ThinkingInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellospringboot/helloschedule/demo.iml" filepath="$PROJECT_DIR$/hellospringboot/helloschedule/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellobeijing/hellobeijing.iml" filepath="$PROJECT_DIR$/hellobeijing/hellobeijing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/hellolearn.iml" filepath="$PROJECT_DIR$/hellolearn/hellolearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolock/hellolock.iml" filepath="$PROJECT_DIR$/hellolock/hellolock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellospringboot/hellomq/hellomq.iml" filepath="$PROJECT_DIR$/hellospringboot/hellomq/hellomq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellospringboot/hellospringboot/hellospringboot.iml" filepath="$PROJECT_DIR$/hellospringboot/hellospringboot/hellospringboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/helloworld/helloworld.iml" filepath="$PROJECT_DIR$/helloworld/helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javademo.iml" filepath="$PROJECT_DIR$/.idea/javademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellokafka/kafka.iml" filepath="$PROJECT_DIR$/hellokafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-model/learn-model.iml" filepath="$PROJECT_DIR$/hellolearn/learn-model/learn-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-persist/learn-persist.iml" filepath="$PROJECT_DIR$/hellolearn/learn-persist/learn-persist.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-service/learn-service.iml" filepath="$PROJECT_DIR$/hellolearn/learn-service/learn-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-task-app/learn-task-app.iml" filepath="$PROJECT_DIR$/hellolearn/learn-task-app/learn-task-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-utils/learn-utils.iml" filepath="$PROJECT_DIR$/hellolearn/learn-utils/learn-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-web/learn-web.iml" filepath="$PROJECT_DIR$/hellolearn/learn-web/learn-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-web-edit/learn-web-edit.iml" filepath="$PROJECT_DIR$/hellolearn/learn-web-edit/learn-web-edit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AllSample/leet-code/leet-code.iml" filepath="$PROJECT_DIR$/AllSample/leet-code/leet-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AllSample/thread-sample/thread-sample.iml" filepath="$PROJECT_DIR$/AllSample/thread-sample/thread-sample.iml" />
     </modules>
   </component>
 </project>

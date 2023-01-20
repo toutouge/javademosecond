@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -339,7 +340,27 @@ public class Main {
         //Date updateTime = new Date();
         //System.out.println(TimeConvertBatchId(updateTime));
         //voidTest();
-        System.out.println(addDays(new Date(),-1));
+        //System.out.println(addDays(new Date(),-1));
+//        List<Integer> userIds = Arrays.asList(100,1000);
+//        for (Integer userId : userIds){
+//            if(userId == 100){
+//                System.out.println(1);
+//                return;
+//            }
+//
+//            System.out.println(userId);
+//        }
+//        LocalDate localDate = LocalDate.now().minusDays(90);
+//        System.out.println(localDate);
+        List<String> titles = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            titles.add(String.valueOf(i));
+        }
+
+        for (int i = 0; i < 50; i++) {
+            System.out.println(new Random().nextInt(titles.size()));
+        }
+
         System.out.println("OK");
     }
 
