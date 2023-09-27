@@ -20,6 +20,10 @@ public class UserController {
     @Autowired
     UserAccountService userAccountService;
 
+    /**
+     *
+     * @return
+     */
     @GetMapping("/user/hello")
     public String helloWorld() {
         return "hello world.";
