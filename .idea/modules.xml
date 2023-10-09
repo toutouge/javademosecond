@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-web/learn-web.iml" filepath="$PROJECT_DIR$/hellolearn/learn-web/learn-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-web-edit/learn-web-edit.iml" filepath="$PROJECT_DIR$/hellolearn/learn-web-edit/learn-web-edit.iml" />
       <module fileurl="file://$PROJECT_DIR$/AllSample/leet-code/leet-code.iml" filepath="$PROJECT_DIR$/AllSample/leet-code/leet-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/security-demo/security-demo.iml" filepath="$PROJECT_DIR$/security-demo/security-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/AllSample/thread-sample/thread-sample.iml" filepath="$PROJECT_DIR$/AllSample/thread-sample/thread-sample.iml" />
     </modules>
   </component>
