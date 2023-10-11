@@ -1,6 +1,6 @@
 package com.demo.security.config;
 
-import com.demo.security.model.UserLogin;
+import com.demo.security.model.dto.UserLogin;
 import com.demo.security.model.po.UserPo;
 import com.demo.security.service.UserService;
 import lombok.extern.slf4j.Slf4j;

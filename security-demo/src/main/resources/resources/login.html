@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" href="css/login.css" type="text/css">
 </head>
 <body>
 <form class="login-page" action="/login" method="post">
@@ -12,6 +11,11 @@
         <input type="text" placeholder="请输入用户名" name="username" required="required" />
         <br/>
         <input type="password" placeholder="请输入密码" name="password" required="required" />
+        <br/>
+        <span style="display: inline">
+            <input type="text" name="请输入验证码" placeholder="验证码" required="required"/>
+            <img src="/code/image"/>
+        </span>
         <br/>
         <button type="submit">登录</button>
     </div>

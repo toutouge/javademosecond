@@ -1,4 +1,4 @@
-package com.demo.security.model;
+package com.demo.security.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
