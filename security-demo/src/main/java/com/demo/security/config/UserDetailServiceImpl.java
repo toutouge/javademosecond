@@ -1,6 +1,8 @@
 package com.demo.security.config;
 
 import com.demo.security.model.UserLogin;
+import com.demo.security.model.po.UserPo;
+import com.demo.security.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -21,11 +23,19 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    UserService userService;
+
     @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        UserPo userPo = userService.getUserByUserName(userName);
+        if(userPo == null){
+            throw new RuntimeException("用户名或密码错误");
+        }
+
         UserLogin user = new UserLogin();
-        user.setUsername("user");
-        user.setPassword(passwordEncoder.encode("123456"));
+        user.setUsername(userPo.getUserName());
+        user.setPassword(passwordEncoder.encode(userPo.getPwd()));
 
         log.info("password : " + user.getPassword());
         return user;
