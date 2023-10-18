@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function refresh_kaptcha() {
+            var path = "http://localhost:8301/demo/kaptcha?p=" + Math.random();
+            document.getElementById("kaptcha").src=path;
+        }
+
+        function login() {
+            var xhr = new XMLHttpRequest;
+
+            xhr.open('post', 'http://localhost:8301/demo/login');
+            // post请求的参数要放在send方法中作为参数的 - 必须的字符串
+            // post请求要带参数必须在send之前设置 头信息
+            xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+            // 数据在传送之前需要进行编码
+            xhr.send('kaptcha=' + document.getElementById("kaptcha_value").value)
+            xhr.onreadystatechange = function () {
+                // 监听请求状态的变化 readystate (1-5 1准备发送 2 发送完成 3 发送完成数据准备接收 4数据
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        var res = xhr.responseText;
+                        //res = JSON.parse(res)
+                        alert(res);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h3>请登录</h3>
+<div class="col-sm-4">
+    <input type="text" placeholder="请输入用户名" name="username" required="required"/>
+    <br/>
+    <input type="password" placeholder="请输入密码" name="password" required="required"/>
+    <br/>
+    <span style="display: inline">
+            <input type="text" name="请输入验证码" id="kaptcha_value" placeholder="验证码" required="required"/>
+            <img src="http://localhost:8301/demo/kaptcha" id="kaptcha" style="width:100px;height:50px;" class="mr-2"/>
+            <a href="javascript:refresh_kaptcha();" class="font-size-12 align-bottom">刷新验证码</a>
+    </span>
+    <br/>
+    <button type="submit" onclick="login()">登录</button>
+</div>
+</body>
+</html>

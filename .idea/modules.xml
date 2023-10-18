@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/helloworld/helloworld.iml" filepath="$PROJECT_DIR$/helloworld/helloworld.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javademo.iml" filepath="$PROJECT_DIR$/.idea/javademo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellokafka/kafka.iml" filepath="$PROJECT_DIR$/hellokafka/kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kaptcha-demo/kaptcha-demo.iml" filepath="$PROJECT_DIR$/kaptcha-demo/kaptcha-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-model/learn-model.iml" filepath="$PROJECT_DIR$/hellolearn/learn-model/learn-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-persist/learn-persist.iml" filepath="$PROJECT_DIR$/hellolearn/learn-persist/learn-persist.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellolearn/learn-service/learn-service.iml" filepath="$PROJECT_DIR$/hellolearn/learn-service/learn-service.iml" />
