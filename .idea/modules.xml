@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AllSample/AllSample.iml" filepath="$PROJECT_DIR$/AllSample/AllSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/ThinkingInJava/ThinkingInJava.iml" filepath="$PROJECT_DIR$/ThinkingInJava/ThinkingInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-demo/batch-demo.iml" filepath="$PROJECT_DIR$/batch-demo/batch-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/batch-example/batch-example.iml" filepath="$PROJECT_DIR$/batch-example/batch-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellospringboot/helloschedule/demo.iml" filepath="$PROJECT_DIR$/hellospringboot/helloschedule/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellobeijing/hellobeijing.iml" filepath="$PROJECT_DIR$/hellobeijing/hellobeijing.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellolearn/hellolearn.iml" filepath="$PROJECT_DIR$/hellolearn/hellolearn.iml" />

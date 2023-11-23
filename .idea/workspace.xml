@@ -1,65 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8d817f9a-5f9b-41b2-a468-446c2458ace3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AllSample/src/main/java/com/toutou/sample/App.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AllSample/src/test/java/com/toutou/sample/AppTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/.idea/compiler.xml" afterPath="$PROJECT_DIR$/AllSample/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/.idea/misc.xml" afterPath="$PROJECT_DIR$/AllSample/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/.idea/modules.xml" afterPath="$PROJECT_DIR$/AllSample/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/.idea/workspace.xml" afterPath="$PROJECT_DIR$/AllSample/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/AllSample.iml" afterPath="$PROJECT_DIR$/AllSample/AllSample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AllSample/pom.xml" afterPath="$PROJECT_DIR$/AllSample/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkingInJava/.idea/workspace.xml" afterPath="$PROJECT_DIR$/ThinkingInJava/.idea/workspace.xml" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/OkHttpUtilsRead.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/BatchDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/controller/BlukController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/model/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/util/GsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/java/com/batch/demo/util/OkHttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-demo/src/test/java/com/batch/demo/BatchDemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/BatchExampleApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/model/Feed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/model/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/service/FeedService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/service/FeedServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/util/GsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/java/com/example/demo/util/OkHttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-example/src/test/java/com/example/demo/BatchExampleApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CacheController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hellospringboot/hellospringboot/src/main/java/com/demo/controller/CacheController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1217#1218#0" expanded="false" />
-                <element signature="e#1273#1274#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uploadController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helloworld/src/main/java/com/csdnspringmvc/controller/uploadController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="28" column="65" lean-forward="true" selection-start-line="28" selection-start-column="65" selection-end-line="28" selection-end-column="65" />
-              <folding>
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyMQController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hellospringboot/hellospringboot/src/main/java/com/demo/controller/MyMQController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -83,6 +68,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -155,27 +147,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/batch-example/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.BatchDemoApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -185,80 +162,54 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
+    <configuration name="BatchDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="batch-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.batch.demo.BatchDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration name="BatchExampleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="batch-example" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.demo.BatchExampleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BatchDemoApplication" />
+      <item itemvalue="Spring Boot.BatchExampleApplication" />
+    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -310,15 +261,10 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/javademosecond$SecurityDemoApplication.ic" NAME="SecurityDemoApplication Coverage Results" MODIFIED="1696923060030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.demo.security.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hellospringboot/hellospringboot/src/main/java/com/demo/controller/CacheController.java">
