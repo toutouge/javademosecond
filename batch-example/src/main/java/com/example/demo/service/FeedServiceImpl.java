@@ -83,7 +83,7 @@ public class FeedServiceImpl implements FeedService {
         }
 
         Assert.isTrue(requestList.stream().allMatch(p -> StringUtils.hasText(p.getLeft()) && Objects.nonNull(p.getRight())), "requestList pair contains empty element");
-        List<String> results = sendGetMultiRequest(requestList.stream().map(ImmutablePair::getLeft).collect(Collectors.toList()).toArray(new String[0]););
+        List<String> results = sendGetMultiRequest(requestList.stream().map(ImmutablePair::getLeft).collect(Collectors.toList()).toArray(new String[0]));
         Assert.isTrue(requestList.size() == results.size(), "results size is not match");
 
         for (int i = 0; i < requestList.size(); i++) {
