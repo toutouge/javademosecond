@@ -13,4 +13,10 @@ public interface FeedService {
      * @return
      */
     Feed getFeed(int id);
+
+    /**
+     *
+     * @return
+     */
+    Feed index(int id);
 }

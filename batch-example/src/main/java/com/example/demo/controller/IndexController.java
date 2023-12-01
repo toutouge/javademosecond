@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class IndexController {
+    @Autowired
+    FeedService feedService;
+
     /**
      * 聚合接口，
      * 1. 返回当前登录用户信息
@@ -23,11 +26,13 @@ public class IndexController {
      *
      * @return
      */
-
-    @Autowired
-    FeedService feedService;
     @GetMapping("/feed")
     public Result feed(int id){
         return Result.setSuccessResult(feedService.getFeed(id));
+    }
+
+    @GetMapping("/index")
+    public Result index(int id){
+        return Result.setSuccessResult(feedService.index(id));
     }
 }

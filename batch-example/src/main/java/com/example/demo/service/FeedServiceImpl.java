@@ -18,12 +18,11 @@ import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -35,6 +34,99 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 public class FeedServiceImpl implements FeedService {
+    /**
+     *
+     * @return
+     */
+    @Override
+    public Feed index(int id){
+        final Feed feed = new Feed();
+        List<ImmutablePair<String, Consumer<String>>> requestList = Lists.newArrayList(
+                ImmutablePair.of("http://demo.com/getuserstatus?id="+id, c ->{
+                    Result<String> source = GsonUtils.toJavaObject(c, new TypeToken<Result<String>>(){});
+                    String userStatus = Result.getSuccessResult(source, "");
+                    feed.setStatus(userStatus);
+                }),
+                ImmutablePair.of("http://demo.com/getcurrentuser?id="+id, c -> {
+                    Result<User> source = GsonUtils.toJavaObject(c, new TypeToken<Result<User>>(){});
+                    User userInfo = Result.getSuccessResult(source, null);
+                    if(userInfo != null){
+                        feed.setUserId(userInfo.getId());
+                        feed.setUserName(userInfo.getUserName());
+                    }
+                }),
+                ImmutablePair.of("http://demo.com/getbloglist", c -> {
+                    Result<List<Blog>> source = GsonUtils.toJavaObject(c, new TypeToken<Result<List<Blog>>>(){});
+                    List<Blog> blogList = Result.getSuccessResult(source, Collections.emptyList());
+                    feed.setBlogList(blogList);
+                })
+        );
+
+        if(id > 10){
+            requestList.add(ImmutablePair.of("http://demo.com/statistics", c -> {
+                Result<Map<String, Integer>> source = GsonUtils.toJavaObject(c, new TypeToken<Result<Map<String, Integer>>>(){
+                });
+                Map<String, Integer> statistics = Result.getSuccessResult(source, Collections.EMPTY_MAP);
+                if(!CollectionUtils.isEmpty(statistics)){
+                    feed.setViewCount(statistics.get("viewcount"));
+                    feed.setLikeCount(statistics.get("likecount"));
+                }
+            }));
+        }
+
+        return feed;
+    }
+
+    private void getMultiRequest(List<ImmutablePair<String, Consumer<String>>> requestList){
+        if (CollectionUtils.isEmpty(requestList)) {
+            return;
+        }
+
+        Assert.isTrue(requestList.stream().allMatch(p -> StringUtils.hasText(p.getLeft()) && Objects.nonNull(p.getRight())), "requestList pair contains empty element");
+        List<String> results = sendGetMultiRequest(requestList.stream().map(ImmutablePair::getLeft).collect(Collectors.toList()).toArray(new String[0]););
+        Assert.isTrue(requestList.size() == results.size(), "results size is not match");
+
+        for (int i = 0; i < requestList.size(); i++) {
+            requestList.get(i).getRight().accept(results.get(i));
+        }
+    }
+
+    ExecutorService executorService = Executors.newWorkStealingPool(Runtime.getRuntime().availableProcessors() * 2);
+    private List<String> sendGetMultiRequest(String[] paths){
+        if(ObjectUtils.isEmpty(paths)){
+            return Collections.emptyList();
+        }
+
+        try {
+            List<Future<String>> futureList = executorService.invokeAll(Arrays.stream(paths).map(path -> {
+                try {
+                    path = URLDecoder.decode(path, StandardCharsets.UTF_8.toString());
+                } catch (UnsupportedEncodingException e) {
+                    log.error("decode fail", e);
+                    return (Callable<String>) () -> null;
+                }
+                String url = path;
+                return (Callable<String>) () -> OkHttpUtils.builder().url(url).get().sync();
+            }).collect(Collectors.toList()));
+            return futureList.stream().map(p -> {
+                try {
+                    return Optional.ofNullable(p.get()).orElse(null);
+                } catch (InterruptedException e) {
+                    log.error("thread interrupt", e);
+                    Thread.currentThread().interrupt();
+                    return null;
+                } catch (ExecutionException e) {
+                    log.error("execution interrupt", e);
+                    return null;
+                }
+            }).collect(Collectors.toList());
+        } catch (InterruptedException e) {
+            log.error("thread interrupt", e);
+            Thread.currentThread().interrupt();
+            return Collections.emptyList();
+        }
+    }
+
     @Override
     public Feed getFeed(int id){
         final Feed feed = new Feed();

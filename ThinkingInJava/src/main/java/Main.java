@@ -352,14 +352,14 @@ public class Main {
 //        }
 //        LocalDate localDate = LocalDate.now().minusDays(90);
 //        System.out.println(localDate);
-        List<String> titles = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            titles.add(String.valueOf(i));
-        }
-
-        for (int i = 0; i < 50; i++) {
-            System.out.println(new Random().nextInt(titles.size()));
-        }
+//        List<String> titles = new ArrayList<>();
+//        for (int i = 0; i < 5; i++) {
+//            titles.add(String.valueOf(i));
+//        }
+//
+//        for (int i = 0; i < 50; i++) {
+//            System.out.println(new Random().nextInt(titles.size()));
+//        }
 
         System.out.println("OK");
     }
